@@ -22,6 +22,7 @@ export default class App extends Component {
             currentGroup: '',
             currentUserID: '',
             username: '',
+            personalGroup: '',
             usersInGroup: []
         };
         this.refreshList = this.refreshList.bind(this);
@@ -75,12 +76,13 @@ export default class App extends Component {
 
     //Get user
     getUser = (personalGroup, userId, username) => {
-      console.log("user id", userId)
+      console.log("user id", userId);
       this.setState({
-        currentGroup: personalGroup,
-        currentUserID: userId,
-        username: username
-      })
+          currentGroup: personalGroup,
+          personalGroup: personalGroup,
+          currentUserID: userId,
+          username: username
+      });
       if (this.state.currentGroup) {
         this.updateList(personalGroup);
         this.getGroups();
@@ -99,7 +101,7 @@ export default class App extends Component {
                 <MuiThemeProvider theme={theme}>
                 <HeaderBar currentUserId={this.state.currentUserID} currentGroup = {this.state.currentGroup} groups={this.state.groups} updateHandler={this.refreshList} usersInGroup={this.state.usersInGroup}/>
                 { this.state.loggedIn
-                  ? <NoteArea notes={this.state.data} updateHandler={this.refreshList} groups={this.state.groups} userName={this.state.username} currentGroup = {this.state.currentGroup} currentUserId={this.state.currentUserID} getGroups={this.getGroups}/>
+                  ? <NoteArea notes={this.state.data} updateHandler={this.refreshList} groups={this.state.groups} userName={this.state.username} currentGroup = {this.state.currentGroup} personalGroup = {this.state.personalGroup} currentUserId={this.state.currentUserID} getGroups={this.getGroups}/>
                   : <LogReg status={this.loggedIn} user={this.getUser} />
                 }
                 </MuiThemeProvider>
