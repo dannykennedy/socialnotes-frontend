@@ -1,0 +1,12 @@
+.noteCard {
+    width: 50%;
+    margin: 10px auto auto;
+}
+.red {
+    color: red;
+    background-color: red;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
