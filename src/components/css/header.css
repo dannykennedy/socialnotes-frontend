@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-self: center;
-  margin-left: 5px;
+  margin: auto;
   /*flex-grow: 6;*/
 }
 
