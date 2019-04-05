@@ -31,6 +31,8 @@ class NoteArea extends React.Component {
         console.log("current group props ", this.props.currentGroup);
         console.log("current UserId props ", this.props.currentUserId);
 
+        console.log("truth?" + this.props.personalGroup == this.props.currentGroup);
+
 
         return (
             <Fragment>
