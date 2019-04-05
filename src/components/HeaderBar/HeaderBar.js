@@ -171,16 +171,6 @@ class HeaderBar extends Component {
     };
 
     render() {
-      // <IconButton
-      //     aria-owns={isMenuOpen ? 'material-appbar' : undefined}
-      //     aria-haspopup="true"
-      //     onClick={(currentUserId) => this.props.updateHandler(currentUserId)}
-      //     color="inherit"
-      // >
-      //     <AccountCircle />
-      // </IconButton>
-
-
 
         const { anchorEl, groupsAnchorEl, mobileMoreAnchorEl } = this.state;
         const { classes } = this.props;
