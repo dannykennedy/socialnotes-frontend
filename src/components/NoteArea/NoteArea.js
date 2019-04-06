@@ -41,7 +41,7 @@ class NoteArea extends React.Component {
                     ?
                     <TextArea updateHandler={updateHandler} currentGroup={this.props.currentGroup}
                               currentUserId={this.props.currentUserId}/>
-                    : <div style={{height:'20px'}}/>
+                    : <div style={{height:'10px'}}/>
                 }
                 <NoteList notes={notes} updateHandler={updateHandler} groups={groups} userName={userName} currentGroup = {this.props.currentGroup} currentUserId={this.props.currentUserId} getGroups={this.props.getGroups}/>
             </Fragment>
