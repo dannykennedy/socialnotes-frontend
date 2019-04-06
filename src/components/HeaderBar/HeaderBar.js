@@ -220,28 +220,36 @@ class HeaderBar extends Component {
                 open={isMobileMenuOpen}
                 onClose={this.handleMenuClose}
             >
-                <MenuItem onClick={this.handleMobileMenuClose}>
-                    <IconButton color="inherit">
-                        <Badge badgeContent={4} color="secondary">
-                            <MailIcon />
-                        </Badge>
-                    </IconButton>
-                    <p>Messages</p>
-                </MenuItem>
-                <MenuItem onClick={this.handleMobileMenuClose}>
-                    <IconButton color="inherit">
-                        <Badge badgeContent={11} color="secondary">
-                            <NotificationsIcon />
-                        </Badge>
-                    </IconButton>
-                    <p>Notifications</p>
-                </MenuItem>
-                <MenuItem onClick={this.handleProfileMenuOpen}>
-                    <IconButton color="inherit">
-                        <AccountCircle />
-                    </IconButton>
-                    <p>Profile</p>
-                </MenuItem>
+                {this.props.groups.map(group => (
+                    <MenuItem button onClick={() => this.props.updateHandler(group.groupId)} key={group.groupName}>
+                        <Avatar className={'groupAvatar'} style={{marginRight: '15px', backgroundColor: '#ffc601'}}>
+                            <GroupIcon />
+                        </Avatar>
+                        {group.groupName}
+                    </MenuItem>
+                ))}
+                {/*<MenuItem onClick={this.handleMobileMenuClose}>*/}
+                    {/*<IconButton color="inherit">*/}
+                        {/*<Badge badgeContent={4} color="secondary">*/}
+                            {/*<MailIcon />*/}
+                        {/*</Badge>*/}
+                    {/*</IconButton>*/}
+                    {/*<p>Messages</p>*/}
+                {/*</MenuItem>*/}
+                {/*<MenuItem onClick={this.handleMobileMenuClose}>*/}
+                    {/*<IconButton color="inherit">*/}
+                        {/*<Badge badgeContent={11} color="secondary">*/}
+                            {/*<NotificationsIcon />*/}
+                        {/*</Badge>*/}
+                    {/*</IconButton>*/}
+                    {/*<p>Notifications</p>*/}
+                {/*</MenuItem>*/}
+                {/*<MenuItem onClick={this.handleProfileMenuOpen}>*/}
+                    {/*<IconButton color="inherit">*/}
+                        {/*<AccountCircle />*/}
+                    {/*</IconButton>*/}
+                    {/*<p>Profile</p>*/}
+                {/*</MenuItem>*/}
             </Menu>
         );
 
