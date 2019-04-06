@@ -13,9 +13,6 @@ const styles = theme => ({
         display: 'grid',
         gridTemplateColumns: '1fr 50% 1fr',
     },
-    // textField: {
-    //     gridColumnStart: '2',
-    // },
     fab: {
         margin: theme.spacing.unit,
     },
@@ -90,7 +87,7 @@ class TextArea extends React.Component {
                 />
 
                 <div>
-                <Fab color="primary" aria-label="Add" className={classes.fab} type="submit" value="Submit">
+                <Fab color="primary" aria-label="Add" className={classes.fab + ' plus-button'} type="submit" value="Submit">
                     <AddIcon />
                 </Fab>
                 </div>
