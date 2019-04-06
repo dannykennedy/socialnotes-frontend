@@ -26,21 +26,22 @@ class NoteArea extends React.Component {
         const { userName } = this.props;
         const { currentGroup } = this.props;
         const { currentUserId } = this.props;
-        console.log("current group", currentGroup);
-        console.log("current UserId", currentUserId);
-        console.log("current group props ", this.props.currentGroup);
-        console.log("current UserId props ", this.props.currentUserId);
-
-        console.log("truth?" + this.props.personalGroup == this.props.currentGroup);
+        // console.log("current group", currentGroup);
+        // console.log("current UserId", currentUserId);
+        // console.log("current group props ", this.props.currentGroup);
+        // console.log("current UserId props ", this.props.currentUserId);
+        //
+        // console.log("truth?" + this.props.personalGroup == this.props.currentGroup);
 
 
         return (
             <Fragment>
+                {/*Only show the note taking area on personal page*/}
                 {this.props.personalGroup == this.props.currentGroup
                     ?
                     <TextArea updateHandler={updateHandler} currentGroup={this.props.currentGroup}
                               currentUserId={this.props.currentUserId}/>
-                    : ""
+                    : <div style={{height:'20px'}}/>
                 }
                 <NoteList notes={notes} updateHandler={updateHandler} groups={groups} userName={userName} currentGroup = {this.props.currentGroup} currentUserId={this.props.currentUserId} getGroups={this.props.getGroups}/>
             </Fragment>

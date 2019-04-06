@@ -260,7 +260,7 @@ class HeaderBar extends Component {
                           {this.props.usersInGroup.map (
                             (name, i) =>
                               <Avatar aria-label="Note" style={{backgroundColor: theme.palette.secondary["A400"], marginLeft:"10px", marginRight:"10px"}} className={'red'}>
-                                  {name.firstName.substring(0, 1) + name.lastName.substring(0, 1)}
+                                  {name.firstName.substring(0, 1).toUpperCase() + name.lastName.substring(0, 1).toUpperCase()}
                               </Avatar>
                           )}
                         </div>
