@@ -14,11 +14,10 @@
 
 .app-name {
   margin-left: 20px;
-  background-color: #802501;
 }
 
 @media (max-width: 770px) {
   .app-name {
-    display: none;
+    display: none !important;
   }
 }

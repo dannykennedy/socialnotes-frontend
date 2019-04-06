@@ -1,6 +1,11 @@
 @media (max-width: 770px) {
     form {
-        grid-template-columns: 90% !important;
+        grid-template-columns: 100% !important;
         grid-template-rows: auto 1fr;
     }
+
+    #outlined-textarea {
+        grid-column-start: 1 !important;
+    }
+
 }
