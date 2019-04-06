@@ -13,9 +13,9 @@ const styles = theme => ({
         display: 'grid',
         gridTemplateColumns: '1fr 50% 1fr',
     },
-    textField: {
-        gridColumnStart: '2',
-    },
+    // textField: {
+    //     gridColumnStart: '2',
+    // },
     fab: {
         margin: theme.spacing.unit,
     },
@@ -72,6 +72,8 @@ class TextArea extends React.Component {
 
         return (
             <form className={classes.container} noValidate autoComplete="off" onSubmit={this.handleSubmit}>
+
+                <div className={'placeholder'}/>
 
                 <TextField
                     id="outlined-textarea"

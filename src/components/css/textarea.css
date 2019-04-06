@@ -4,8 +4,9 @@
         grid-template-rows: auto 1fr;
     }
 
-    #outlined-textarea {
-        grid-column-start: 1 !important;
+    .placeholder {
+        display: none !important;
     }
+
 
 }
