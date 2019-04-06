@@ -12,6 +12,12 @@
   grid-template-columns: repeat(4, 1fr)
 } */
 
-.dragon-group {
+.app-name {
   margin-left: 20px;
+}
+
+@media (max-width: 770px) {
+  .app-name {
+    display: none;
+  }
 }
