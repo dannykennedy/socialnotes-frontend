@@ -266,12 +266,12 @@ class HeaderBar extends Component {
                         </Typography>
                         <Typography className="group-name" variant="h6" color="inherit" noWrap>{this.state.groupName}</Typography>
                         <div className="avatars-initials">
-                          {this.props.usersInGroup.map (
-                            (name, i) =>
-                              <Avatar aria-label="Note" style={{backgroundColor: theme.palette.secondary["A400"], marginLeft:"10px", marginRight:"10px"}} className={'red'}>
-                                  {name.firstName.substring(0, 1).toUpperCase() + name.lastName.substring(0, 1).toUpperCase()}
-                              </Avatar>
-                          )}
+                          {/*{this.props.usersInGroup.map (*/}
+                            {/*(name, i) =>*/}
+                              {/*<Avatar aria-label="Note" style={{backgroundColor: theme.palette.secondary["A400"], marginLeft:"10px", marginRight:"10px"}} className={'red'}>*/}
+                                  {/*{name.firstName.substring(0, 1).toUpperCase() + name.lastName.substring(0, 1).toUpperCase()}*/}
+                              {/*</Avatar>*/}
+                          {/*)}*/}
                         </div>
 
                         <div className={classes.grow} />
