@@ -238,7 +238,7 @@ class HeaderBar extends Component {
                             DragonNotes
                         </Typography>
                         <Typography> </Typography>
-                        <Typography className="group-name" variant="h6" color="inherit" noWrap>{" "} {this.state.groupName}</Typography>
+                        <Typography style={{'margin-left':'10px'}} className="group-name" variant="h6" color="inherit" noWrap>{" "} {this.state.groupName}</Typography>
                         <div className="avatars-initials">
                           {/*{this.props.usersInGroup.map (*/}
                             {/*(name, i) =>*/}
