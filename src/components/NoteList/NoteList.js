@@ -21,7 +21,7 @@ class NoteList extends React.Component {
 
     getNotesInGroup(groupId) {
         fetch(
-            "https://dankennedy.dev/groups/" + groupId
+            "https://dragonnotes.herokuapp.com/groups/" + groupId
         ).then(
             notes => notes.json()
         ).then(notes => this.setState({notes}));

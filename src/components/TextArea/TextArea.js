@@ -52,7 +52,7 @@ class TextArea extends React.Component {
         console.log("current user Id in handle submit Plus button ", this.props.currentUserId)
         console.log("currentGroup ", this.props.currentGroup)
 
-        axios.post("https://dankennedy.dev/notes", {
+        axios.post("https://dragonnotes.herokuapp.com/notes", {
             postText: this.state.inputBoxText,
             userId: this.props.currentUserId
         }).then((data) => {

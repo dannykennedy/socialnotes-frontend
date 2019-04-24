@@ -118,7 +118,7 @@ class HeaderBar extends Component {
 
     // Get group name to be displayed at the top of the page
     getGroupNameById = (groupId) => {
-        axios.get('https://dankennedy.dev/groups/group/' + groupId)
+        axios.get('https://dragonnotes.herokuapp.com/groups/group/' + groupId)
             .then((response) => {
                 console.log(response.data)
                 this.setState({groupName: response.data[0].groupName});
@@ -130,7 +130,7 @@ class HeaderBar extends Component {
 
     // Get group name to be displayed at the top of the page
     getGroupMembersByGroupId = (groupId) => {
-        axios.get('https://dankennedy.dev/groups/' + groupId + '/users')
+        axios.get('https://dragonnotes.herokuapp.com/groups/' + groupId + '/users')
             .then((response) => {
                 // this.setState({groupName: response.data[0].groupName});
             })
@@ -138,11 +138,6 @@ class HeaderBar extends Component {
                 console.log(err)
             })
     };
-
-    getPersonalGroupByUserId = (userId) => {
-      return '14a7f8ce-6fc2-4be1-8fed-dafa6c41cb21';
-    }
-
 
     handleProfileMenuOpen = event => {
         this.setState({ anchorEl: event.currentTarget });
@@ -228,28 +223,6 @@ class HeaderBar extends Component {
                         {group.groupName}
                     </MenuItem>
                 ))}
-                {/*<MenuItem onClick={this.handleMobileMenuClose}>*/}
-                    {/*<IconButton color="inherit">*/}
-                        {/*<Badge badgeContent={4} color="secondary">*/}
-                            {/*<MailIcon />*/}
-                        {/*</Badge>*/}
-                    {/*</IconButton>*/}
-                    {/*<p>Messages</p>*/}
-                {/*</MenuItem>*/}
-                {/*<MenuItem onClick={this.handleMobileMenuClose}>*/}
-                    {/*<IconButton color="inherit">*/}
-                        {/*<Badge badgeContent={11} color="secondary">*/}
-                            {/*<NotificationsIcon />*/}
-                        {/*</Badge>*/}
-                    {/*</IconButton>*/}
-                    {/*<p>Notifications</p>*/}
-                {/*</MenuItem>*/}
-                {/*<MenuItem onClick={this.handleProfileMenuOpen}>*/}
-                    {/*<IconButton color="inherit">*/}
-                        {/*<AccountCircle />*/}
-                    {/*</IconButton>*/}
-                    {/*<p>Profile</p>*/}
-                {/*</MenuItem>*/}
             </Menu>
         );
 

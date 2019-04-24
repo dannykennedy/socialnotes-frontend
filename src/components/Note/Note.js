@@ -30,7 +30,7 @@ export class Note extends React.Component {
 
         // We should really send a token to validate this deletion
         // e.g. const token = localStorage.getItem('sessionToken');
-        const deleteEndpoint = `https://dankennedy.dev/notes/delete/`;
+        const deleteEndpoint = `https://dragonnotes.herokuapp.com/notes/delete/`;
         axios.post(deleteEndpoint, {
             noteId: noteId,
         })

@@ -31,7 +31,7 @@ class Login extends Component {
   //var self = this; -> reference self in function to refer to "this" state in whole scope, not fx scope
 
   onLogin = () => {
-    axios.post("https://dankennedy.dev/login", {
+    axios.post("https://dragonnotes.herokuapp.com/login", {
       email: this.state.email,
       password: this.state.password
     })
