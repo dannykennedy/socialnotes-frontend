@@ -235,9 +235,9 @@ class HeaderBar extends Component {
                             <img alt={"Drexel dragon"} style={{'height':'30px'}} src={require('./yellowdragon.png')} />
                         </IconButton>
                         <Typography className="app-name" variant="h6" color="inherit" noWrap>
-                            DragonNotes
+                            DragonNotes 
                         </Typography>
-                        <Typography className="group-name" variant="h6" color="inherit" noWrap>{this.state.groupName}</Typography>
+                        <Typography className="group-name" variant="h6" color="inherit" noWrap> {this.state.groupName}</Typography>
                         <div className="avatars-initials">
                           {/*{this.props.usersInGroup.map (*/}
                             {/*(name, i) =>*/}
