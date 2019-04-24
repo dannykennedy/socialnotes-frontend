@@ -82,7 +82,7 @@ class Login extends Component {
               <Button
                 className="btnStyleCustom"
                 onClick={this.props.switchMode}
-                >Go Back to Register
+                >Register
               </Button>
           </Paper>
         </div>
