@@ -40,7 +40,7 @@ class ShareDialog extends React.Component {
 
     shareNoteInGroup = (groupId, userId) => {
         const updateHandler = (gid) => { this.props.updateHandler(groupId) }
-        const shareEndpoint = `https://dankennedy.dev/groups/notes/`;
+        const shareEndpoint = `https://dragonnotes.herokuapp.com/groups/notes/`;
         axios.post(shareEndpoint, {
             noteId: this.props.noteId,
             groupId: groupId,
@@ -72,7 +72,7 @@ class ShareDialog extends React.Component {
 
     createGroup = (userId) => {
       console.log("currentUserId in create function ", this.props.currentUserId)
-      axios.post('https://dankennedy.dev/groups', {
+      axios.post('https://dragonnotes.herokuapp.com/groups', {
         groupName: this.state.groupName,
         userId: this.props.currentUserId
       })

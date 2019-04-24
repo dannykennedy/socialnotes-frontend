@@ -41,14 +41,14 @@ export default class App extends Component {
         // console.log("the new group is" + groupId);
         // console.log("group: " + groupId);
         //fetches notes for that group id
-        fetch("https://dankennedy.dev/groups/" + groupId)
+        fetch("https://dragonnotes.herokuapp.com/groups/" + groupId)
         .then(data => data.json())
         .then(data => {
               console.log("data in app (notes) ", data)
               this.setState({data})
         });
 
-        fetch("https://dankennedy.dev/groups/" + groupId + "/users")
+        fetch("https://dragonnotes.herokuapp.com/groups/" + groupId + "/users")
         .then(data => data.json())
         .then(usersInGroup => {
               console.log("usersInGroup in app (notes) ", usersInGroup)
@@ -57,7 +57,7 @@ export default class App extends Component {
     }
 
     getGroups = () => {
-        fetch(`https://dankennedy.dev/groups`)
+        fetch(`https://dragonnotes.herokuapp.com/groups`)
         .then(groups => groups.json())
         .then(groups => this.setState({groups}));
     }

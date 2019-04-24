@@ -34,7 +34,7 @@ class Register extends Component {
   //var self = this; -> reference self in function to refer to "this" state in whole scope, not fx scope
   onRegister = () => {
     console.log("state", this.state)
-    axios.post("https://dankennedy.dev/registerUser", {
+    axios.post("https://dragonnotes.herokuapp.com/registerUser", {
       password: this.state.password,
       userName: this.state.username,
       email: this.state.email,
@@ -44,7 +44,7 @@ class Register extends Component {
     .then((data) => {
       console.log(data)
       if (data.status == "200") { this.props.done() }
-      axios.post("https://dankennedy.dev/login", {
+      axios.post("https://dragonnotes.herokuapp.com/login", {
         email: this.state.email,
         password: this.state.password
       })
@@ -53,7 +53,7 @@ class Register extends Component {
         let userId = resp.data[0].userId
         let personalGroup = resp.data[0].personalGroup
 
-        axios.post("https://dankennedy.dev/groups/users", {
+        axios.post("https://dragonnotes.herokuapp.com/groups/users", {
           userId: userId,
           groupId: personalGroup
         })
