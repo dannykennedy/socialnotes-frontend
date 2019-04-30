@@ -84,6 +84,7 @@ class Login extends Component {
                 onClick={this.props.switchMode}
                 >Register
               </Button>
+            <p>Note: The app might take a few seconds to wake up, please be patient!</p>
           </Paper>
         </div>
         </MuiThemeProvider>
